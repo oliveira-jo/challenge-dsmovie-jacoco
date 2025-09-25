@@ -17,7 +17,6 @@ import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
-@SuppressWarnings("serial")
 @Entity
 @Table(name = "tb_user")
 public class UserEntity implements UserDetails {
@@ -83,10 +82,10 @@ public class UserEntity implements UserDetails {
 		return roles;
 	}
 
-    public void addRole(RoleEntity role) {
-    	roles.add(role);
-    }
-    
+	public void addRole(RoleEntity role) {
+		roles.add(role);
+	}
+
 	@Override
 	public boolean isAccountNonExpired() {
 		return true;
